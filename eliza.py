@@ -17,9 +17,9 @@ from threading import Timer
 
 
 """
-Key is regular expression which is used to do word spotting. Value is the possible answers. 
-If a match has been found by using the regular expression. Eliza will randomly choose an answer from the dictionary values.
-Some answer include place holder, which will be replaced by the first match.
+Key is a regular expression which is used for word spotting. Value is the possible answer. 
+If a match has been found by using the regular expression, Eliza will randomly choose an answer from the dictionary values.
+Some answers include a place holder, which will be replaced by the first match.
 
 For example:
     [Sree] I am studying
@@ -217,7 +217,7 @@ response_dict = {
     }
     
    
-# it will be used to tranformed from 2nd person to 1st person
+# it will be used to tranform from 2nd person to 1st person
 pronoun_dict = {
     "you": "me",
     "your": "my",
@@ -231,12 +231,7 @@ def make_a_beep():
         print('\a')
         time.sleep(1)
         
-#    sys.stdout.close()
-#    for i in range(1,3):
-#        sys.stdout.write('\a')
-#        sys.stdout.flush()
-#        time.sleep(1)
-#    sys.stdout.close()
+
 
 
 # check whether input includes "kill" or "murder" or "suicide". if yes, make 2 beeps        
